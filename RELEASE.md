@@ -90,6 +90,8 @@ In the starter code, implement the functions in `ImplementMe.py` that underlie t
 
 Implement the six functions listed above. `output_ids_to_masks()` returns the prompt, completion, and attention masks, each worth one point. The supplied `output_ids_to_prompt_mask`, `output_ids_to_completion_mask`, and `output_ids_to_attention_mask` wrappers test these outputs separately; do not implement or modify the wrappers.
 
+Partial credit is proportional within each function or mask: `earned points = allocated points * passed tests / total tests for that function or mask`. Add these contributions to obtain the part I score out of 10. For example, passing 7 of 14 tests for `get_per_token_logprobs` earns `2 * 7 / 14 = 1` point. Each of the three masks is scored separately out of 1 point. Use the exact test counts, not rounded pass percentages, when calculating marks.
+
 The test cases are written so that if your implementation passes them, it is very likely correct, and you should move on to parts II and III.
 
 ## Part II [20 points]
