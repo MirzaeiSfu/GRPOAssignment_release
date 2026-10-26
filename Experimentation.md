@@ -46,6 +46,6 @@ YOUR ANSWER
 
 # Best Model
 
-**[4pts]** For the most performant model, document its complete hyperparameter setting, point out any hyperparameters you optimized over or introduced yourself, and if you made any algorithmic changes, discuss them.
+**[4pts]** For the most performant model, document its complete hyperparameter setting and identify the existing hyperparameters you tuned. Algorithmic changes are not permitted in parts II or III.
 
 YOUR ANSWER

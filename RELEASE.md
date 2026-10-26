@@ -84,7 +84,7 @@ Implement the six functions listed above. `output_ids_to_masks()` returns the pr
 The test cases are written so that if your implementation passes them, it is very likely correct, and you should move on to parts II and III.
 
 ## Part II [20 points]
-With part I finished, you will have a working `TrainGRPO.py` script. It finetunes language models to perform the headline sentiment manipulation task. You can tune the existing hyperparameters it makes available in `get_args()`, add new hyperparameters and tune them, or modify the code to introduce more effective algorithms (a few constraints on this are given below).
+With part I finished, you will have a working `TrainGRPO.py` script. It finetunes language models to perform the headline sentiment manipulation task. For both parts II and III, improve performance only by tuning the existing hyperparameters available in `get_args()`. Do not introduce new algorithms or change the provided training algorithm, reward function, or evaluation procedure. Completing the required implementations in part I is still required.
 
 In this portion of the assignment, you will be evaluated on only your documentation of this process. Specifically, you need to document how you create your most performant model, as well as give the documentation for **two** "experiments" performed in the process of getting to it (though you may need/want to run more).
 
@@ -99,12 +99,12 @@ Specifically, for each experiment, answer the following in the `Experimentation.
 
 Finally,
 
-**[4pts]** For the most performant model, document its complete hyperparameter setting, point out any hyperparameters you optimized over or introduced yourself, and if you made any algorithmic changes, discuss them.
+**[4pts]** For the most performant model, document its complete hyperparameter setting and identify the existing hyperparameters you tuned. Algorithmic changes are not permitted in parts II or III.
 
 Experimentation is an inherently messy process, and so it's not necessarily the case that what you write will make what you did seem perfect. Therefore, grading is based on how well you communicate the variables of interest, document how you tested them (eg. command line arguments), document the results and conclusions—not whether the experiment is a success. _Towards the end of this document, there is a sample piece of experiment documentation as an example of what's expected._
 
 ## Part III [10 points]
-The last part of the assignment is simply a measure of the validation reward achieved by your best model. The grading is simple: your score is `min(10, 10 * reward_mean_val / 1.8)`. In other words, if you can get `reward_mean_val` of at least `1.8`, you should expect full credit for this part provided you achieve it through tuning multiple hyperparameters (no training on the validation set, though you don't need to worry about cross-validation.)
+The last part of the assignment is simply a measure of the validation reward achieved by your best model. The grading is simple: your score is `min(10, 10 * reward_mean_val / 1.8)`. In other words, if you can get `reward_mean_val` of at least `1.8`, you should expect full credit for this part provided you achieve it only through tuning multiple existing hyperparameters, following the restrictions in part II (no training on the validation set, though you don't need to worry about cross-validation.)
 
 # What To Submit
 Submission is on Coursys. You will **(1)** submit your finished `ImplementMe.py`, **(2)** submit your writeup for part II as an `Experimentation.md` file, **(3)** submit your code as a GitHub link (remember to share the repo!) with the git tag used for your final run, **(4)** Submit a link to your Comet workspace/project (remember to share it!), and **(5)** submit a link to your best run on Comet
