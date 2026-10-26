@@ -68,6 +68,15 @@ Here, the free GPU access is via a Google Colab runtime. For this you will need 
 5. In the Colab terminal, before running code with GPU support, run the `pip install ...` commands for the Python environment given in `README.md`. Now you should be good to go.
 
 
+### Starting a Training Run
+After completing part I and the environment setup, run training from the repository directory on a GPU. The defaults `--lr 0` and `--eval_iter 0` disable learning and validation respectively, so set a nonzero learning rate and enable validation explicitly.
+
+For example, replace `YOUR_GROUP_NAME` with your Comet workspace and project name:
+```bash
+python TrainGRPO.py --lr 1e-5 --eval_iter 1 --comet online --comet_workspace YOUR_GROUP_NAME --comet_project YOUR_GROUP_NAME
+```
+This uses the default 32 training epochs, evaluates after every epoch, and logs to Comet. It is a starting configuration for experimentation, not a guarantee of the reward required for full credit. Tune the existing hyperparameters for parts II and III.
+
 ## Part I [10 points]
 In the starter code, implement the functions in `ImplementMe.py` that underlie the GRPO algorithm. Implementations must be completely vectorized (no loops!). The points awarded for each are proportional to their difficulty. Specifically:
 | Function | Points |
