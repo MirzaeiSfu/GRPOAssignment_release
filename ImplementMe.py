@@ -205,9 +205,29 @@ def rewards_to_advantages(*, rewards, grpo_completions, **kwargs):
     """
     raise NotImplementedError()
 
+def move_test_data_to_device(value, device):
+    """Moves tensors in test inputs/outputs to [device], preserving their dtypes."""
+    if isinstance(value, torch.Tensor):
+        return value.to(device)
+    if isinstance(value, dict):
+        return {k: move_test_data_to_device(v, device) for k, v in value.items()}
+    if isinstance(value, list):
+        return [move_test_data_to_device(v, device) for v in value]
+    if isinstance(value, tuple):
+        return tuple(move_test_data_to_device(v, device) for v in value)
+    if isinstance(value, argparse.Namespace):
+        return argparse.Namespace(**{k: move_test_data_to_device(v, device)
+            for k, v in vars(value).items()})
+    return value
+
 @torch.no_grad()
 def test_fn(*, fn, fn_args, fn_kwargs, fn_expected_output, device="cpu", verbose=False):
-    """Tests [fn] with the given arguments and returns the output."""
+    """Tests [fn] with inputs and expected output moved to [device]."""
+    # Transfer outside the submission exception handler so an unavailable device
+    # is reported as a setup error, not as a failed student implementation.
+    fn_args = move_test_data_to_device(fn_args, device)
+    fn_kwargs = move_test_data_to_device(fn_kwargs, device)
+    fn_expected_output = move_test_data_to_device(fn_expected_output, device)
     try:
         output = fn(*fn_args, device=device, **fn_kwargs)
     except Exception as e:
@@ -247,7 +267,12 @@ def test_fn(*, fn, fn_args, fn_kwargs, fn_expected_output, device="cpu", verbose
     
     # This try-except will catch any other issues
     try:
-        passed = torch.allclose(output, fn_expected_output)
+        # CUDA float32 exp can differ from CPU by an ULP; cancellation in
+        # the KL expression exposes this near zero. Keep the relative tolerance
+        # and CPU behavior unchanged, allowing two float32 epsilons on CUDA.
+        atol = 2 * torch.finfo(torch.float32).eps if (
+            output.is_cuda and output.dtype == torch.float32) else 1e-8
+        passed = torch.allclose(output, fn_expected_output, rtol=1e-5, atol=atol)
     except Exception as e:
         passed = False
         tb = traceback.TracebackException.from_exception(e)
