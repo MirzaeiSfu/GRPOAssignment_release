@@ -73,13 +73,13 @@ In the starter code, implement the functions in `ImplementMe.py` that underlie t
 | Function | Points |
 | --- | ---: |
 | `compute_grpo_loss` | 1 |
-| `output_ids_to_prompt_mask` | 1 |
-| `output_ids_to_completion_mask` | 1 |
-| `output_ids_to_attention_mask` | 1 |
+| `output_ids_to_masks` | 3 (1 per returned mask) |
 | `get_per_token_logprobs` | 2 |
 | `grpo_rl_objective` | 2 |
 | `grpo_kl_loss` | 1 |
 | `rewards_to_advantages` | 1 |
+
+Implement the six functions listed above. `output_ids_to_masks()` returns the prompt, completion, and attention masks, each worth one point. The supplied `output_ids_to_prompt_mask`, `output_ids_to_completion_mask`, and `output_ids_to_attention_mask` wrappers test these outputs separately; do not implement or modify the wrappers.
 
 The test cases are written so that if your implementation passes them, it is very likely correct, and you should move on to parts II and III.
 
