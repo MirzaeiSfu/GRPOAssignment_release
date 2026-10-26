@@ -51,6 +51,7 @@ def output_ids_to_masks(*, output_ids, prompt_input_ids, pad_token_id, eos_token
     """Returns a Namespace with 'attention_mask', 'completion_mask', and
     'prompt_mask' attributes. These respectively map to (BS C)xT 0-1 mask tensors 
     [attention_mask], [completion_mask], and [prompt_mask], defined as follows.
+    All three masks must have dtype torch.int32 and contain only 0 and 1.
 
     Define the PROMPT REGION of each sequence in [prompt_input_ids] as the span of
     tokens from the first non-pad token to the end.
