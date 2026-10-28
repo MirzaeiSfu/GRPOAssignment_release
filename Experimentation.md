@@ -46,6 +46,6 @@ YOUR ANSWER
 
 # Best Model
 
-**[4pts]** For the most performant model, document its complete hyperparameter setting and identify the existing hyperparameters you tuned. Algorithmic changes are not permitted in parts II or III.
+**[4pts]** For the most performant model, document its complete hyperparameter setting and identify the existing hyperparameters you tuned. Algorithmic changes are not permitted in parts II or III. Include the link to your best Comet run, the epoch number with its highest logged `reward/reward_mean_val`, and that validation reward value. This is the epoch used for Part III grading.
 
 YOUR ANSWER

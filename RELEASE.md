@@ -119,8 +119,10 @@ Experimentation is an inherently messy process, and so it's not necessarily the 
 ## Part III [20 points]
 The last part of the assignment is simply a measure of the validation reward achieved by your best model. The grading is simple: your score is `max(0, min(20, 20 * reward_mean_val / 1.8))`. Scores are bounded between 0 and 20 points; negative validation rewards receive 0 points. In other words, if you can get `reward_mean_val` of at least `1.8`, you should expect full credit for this part provided you achieve it only through tuning multiple existing hyperparameters, following the restrictions in part II (no training on the validation set, though you don't need to worry about cross-validation.)
 
+For grading, use the highest validation reward recorded at any evaluated epoch in your submitted best Comet run. This may be an earlier epoch rather than the final epoch. The metric appears in Comet as `reward/reward_mean_val`. Identify the run, the epoch number as logged in Comet, and that epoch's validation reward in your best-model documentation in `Experimentation.md`. The run must use the required validation data and follow the hyperparameter-only restrictions above.
+
 # What To Submit
-Submission is on Coursys. You will **(1)** submit your finished `ImplementMe.py`, **(2)** submit your writeup for part II as an `Experimentation.md` file, **(3)** submit your code as a GitHub link (remember to share the repo!) with the git tag used for your final run, **(4)** Submit a link to your Comet workspace/project (remember to share it!), and **(5)** submit a link to your best run on Comet
+Submission is on Coursys. You will **(1)** submit your finished `ImplementMe.py`, **(2)** submit your writeup for part II as an `Experimentation.md` file, **(3)** submit your code as a GitHub link (remember to share the repo!) with the git tag used for your final run, **(4)** Submit a link to your Comet workspace/project (remember to share it!), and **(5)** submit a link to your best run on Comet, identifying the best evaluated epoch and its validation reward.
 
 # Hints
 - You can complete part I without a GPU
