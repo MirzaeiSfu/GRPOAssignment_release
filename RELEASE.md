@@ -124,6 +124,8 @@ For grading, use the highest validation reward recorded at any evaluated epoch i
 # What To Submit
 Submission is on Coursys. You will **(1)** submit your finished `ImplementMe.py`, **(2)** submit your writeup for part II as an `Experimentation.md` file, **(3)** submit your code as a GitHub link (remember to share the repo!) with the git tag used for your final run, **(4)** Submit a link to your Comet workspace/project (remember to share it!), and **(5)** submit a link to your best run on Comet, identifying the best evaluated epoch and its validation reward.
 
+Part III is graded using the submitted Comet run evidence, best-epoch documentation, and submitted code. You do not need to submit model weights or a checkpoint. Ensure the TAs can access your Comet run and the GitHub repository and tag specified in your submission.
+
 # Hints
 - You can complete part I without a GPU
 - You don't need more than 32 epochs—on a Google Colab T4, your runs should probably take 30–50 minutes (and it's valid to do hyperparameter tuning in "smaller" settings that take less time).
