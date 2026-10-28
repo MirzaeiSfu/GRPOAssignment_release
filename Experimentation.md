@@ -2,11 +2,11 @@
 # Part II
 ## Experiment I
 
-**[2pts]** What are the dependent variables (ie. ones you would like to influence by changing independent variables)? If not validation reward, why are they important?
+**[2pts]** What is the dependent variable (ie. what you would like to influence by changing an independent variable)? If it is not validation reward, why is it important?
 
 YOUR ANSWER
 
-**[2pts]** What are the independent variables (ie. ones you can manipulate), and  what settings of them will you consider? Why would different settings of them plausibly be related to the dependent variables?
+**[2pts]** What is the independent variable (ie. one you can manipulate), and  what settings of it will you consider? Why would different settings of the independent variable plausibly be related to the dependent variable?
 
 YOUR ANSWER
 
@@ -24,11 +24,11 @@ YOUR ANSWER
 
 ## Experiment II
 
-**[2pts]** What are the dependent variables (ie. ones you would like to influence by changing independent variables)? If not validation reward, why are they important?
+**[2pts]** What is the dependent variable (ie. what you would like to influence by changing an independent variable)? If it is not validation reward, why is it important?
 
 YOUR ANSWER
 
-**[2pts]** What are the independent variables (ie. ones you can manipulate), and  what settings of them will you consider? Why would different settings of them plausibly be related to the dependent variables?
+**[2pts]** What is the independent variable (ie. one you can manipulate), and  what settings of it will you consider? Why would different settings of the independent variable plausibly be related to the dependent variable?
 
 YOUR ANSWER
 
