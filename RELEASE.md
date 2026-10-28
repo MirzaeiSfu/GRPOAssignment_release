@@ -122,9 +122,15 @@ The last part of the assignment is simply a measure of the validation reward ach
 For grading, use the highest validation reward recorded at any evaluated epoch in your submitted best Comet run. This may be an earlier epoch rather than the final epoch. The metric appears in Comet as `reward/reward_mean_val`. Identify the run, the epoch number as logged in Comet, and that epoch's validation reward in your best-model documentation in `Experimentation.md`. The run must use the required validation data and follow the hyperparameter-only restrictions above.
 
 # What To Submit
-Submission is on Coursys. You will **(1)** submit your finished `ImplementMe.py`, **(2)** submit your writeup for part II as an `Experimentation.md` file, **(3)** submit your code as a GitHub link (remember to share the repo!) with the git tag used for your final run, **(4)** Submit a link to your Comet workspace/project (remember to share it!), and **(5)** submit a link to your best run on Comet, identifying the best evaluated epoch and its validation reward.
 
-Part III is graded using the submitted Comet run evidence, best-epoch documentation, and submitted code. You do not need to submit model weights or a checkpoint. Ensure the TAs can access your Comet run and the GitHub repository and tag specified in your submission.
+Submit the following through the assignment submission page on [Coursys](https://coursys.sfu.ca/):
+
+1. **Upload `ImplementMe.py`.** Submit your completed implementation file directly. For part I, the TAs will test this file using the instructor's original supporting files, test runner, and test cases. Changes to your local supporting files or tests will not affect this grading.
+2. **Upload `Experimentation.md`.** Include the two experiment writeups and best-model documentation required for part II. Include the supporting Comet links in this document.
+3. **Provide your private GitHub repository link and Git tag.** The tag must identify the code version used for your submitted best Comet run. Ensure the tag is pushed and the TAs have access to the repository.
+4. **Provide your Comet evidence links.** Include the workspace/project link, the runs supporting both experiments, and your best run. Make the configurations, hyperparameters, and results accessible to the TAs. Identify the best evaluated epoch by its logged epoch number and report its `reward/reward_mean_val` value.
+
+Part III is graded using the submitted Comet run evidence, best-epoch documentation, and submitted code. You do not need to submit model weights or a checkpoint. GitHub and Comet links do not replace the required `ImplementMe.py` and `Experimentation.md` file uploads to Coursys.
 
 # Hints
 - You can complete part I without a GPU
