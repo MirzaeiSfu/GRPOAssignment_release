@@ -101,8 +101,8 @@ def output_ids_to_masks(*, output_ids, prompt_input_ids, pad_token_id, eos_token
 
 
 ######################################################################################
-# DO NOT IMPLEMENT THESE! Instead, implement output_ids_to_masks() instead.
-# Correct implementations for them a bunch of code, and they all have the same test
+# DO NOT IMPLEMENT THESE! Instead, implement output_ids_to_masks().
+# Their implementations share code, and they all have the same test
 # cases. It might be easier to debug each component output separately though, so
 # separate functions are provided.
 ######################################################################################
@@ -134,7 +134,7 @@ def output_ids_to_attention_mask(*, output_ids, prompt_input_ids, pad_token_id, 
 def get_per_token_logprobs(*, logits, token_ids, **kwargs):
     """Returns a BSx(T-1) tensor of log-probabilities, whose ij element is the
     log-probability of the j+1th token in the ith sequence of [token_ids], given all
-    the preceeding tokens 0...j (inclusive) in the ith sequence of [token_ids].
+    the preceding tokens 0...j (inclusive) in the ith sequence of [token_ids].
 
     HINTS:
     1. Understanding logits: singlestore.com/blog/a-guide-to-softmax-activation-function

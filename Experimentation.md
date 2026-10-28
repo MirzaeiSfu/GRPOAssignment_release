@@ -10,11 +10,11 @@ YOUR ANSWER
 
 YOUR ANSWER
 
-**[1pts]** Are there any nuisance variables (ie. ones that could introduce noise to results)? If so, are you going to control for them? Why or why not?
+**[1pt]** Are there any nuisance variables (ie. ones that could introduce noise to results)? If so, are you going to control for them? Why or why not?
 
 YOUR ANSWER
 
-**[1pts]** Documentation—how can you identify **(a)** runs associated to the experiment later, **(b)** each of their precise configurations (a set of variables such that results are deterministic given them—ie. hyperparameters, code, random seed(s), etc.), and **(c)** the results that each achieved?
+**[1pt]** Documentation—how can you identify **(a)** runs associated to the experiment later, **(b)** each of their precise configurations (a set of variables such that results are deterministic given them—ie. hyperparameters, code, random seed(s), etc.), and **(c)** the results that each achieved?
 
 YOUR ANSWER
 
@@ -32,11 +32,11 @@ YOUR ANSWER
 
 YOUR ANSWER
 
-**[1pts]** Are there any nuisance variables (ie. ones that could introduce noise to results)? If so, are you going to control for them? Why or why not?
+**[1pt]** Are there any nuisance variables (ie. ones that could introduce noise to results)? If so, are you going to control for them? Why or why not?
 
 YOUR ANSWER
 
-**[1pts]** Documentation—how can you identify **(a)** runs associated to the experiment later, **(b)** each of their precise configurations (a set of variables such that results are deterministic given them—ie. hyperparameters, code, random seed(s), etc.), and **(c)** the results that each achieved?
+**[1pt]** Documentation—how can you identify **(a)** runs associated to the experiment later, **(b)** each of their precise configurations (a set of variables such that results are deterministic given them—ie. hyperparameters, code, random seed(s), etc.), and **(c)** the results that each achieved?
 
 YOUR ANSWER
 

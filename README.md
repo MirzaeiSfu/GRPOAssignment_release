@@ -22,7 +22,7 @@ pip install psutil==7.2.2
 ### A Note on Indexing
 In this assignment, there are tensors of many dimensions. Intuitively, a one-dimensional tensor is a vector, a two-dimensional tensor is a matrix, and higher dimensional tensors are just... tensors.
 
-In function documentation, tensor shapes are denoted with capital letters and separated by `x` symbols. Usually each dimension of a tensor will have semantic meaning. For example, a two-dimensional tensor giving a batch of token IDs might have a shape `BSxL`, where `BS` would denotes a batch size and `L` a sequence length.
+In function documentation, tensor shapes are denoted with capital letters and separated by `x` symbols. Usually each dimension of a tensor will have semantic meaning. For example, a two-dimensional tensor giving a batch of token IDs might have a shape `BSxL`, where `BS` denotes a batch size and `L` a sequence length.
 
 Sometimes there will be a sort of implicit organization along a particular dimension. For example, writing that a tensor has shape `(BS C)xL` would indicate that along the zeroth dimension (of size `(BS C)`), the first `C` elements are in some way grouped together, the next `C` elements are in some way grouped together, and so on.
 

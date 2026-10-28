@@ -752,7 +752,7 @@ if __name__ == "__main__":
 
     ##################################################################################
     # Now we are ready to initialize Comet logging and start training. At this point,
-    # [args] is trearted as immutable because with it fixed, the exact training run
+    # [args] is treated as immutable because with it fixed, the exact training run
     # is exactly specified. Comet captures everything printed to the terminal, but
     # never uploads checkpoints since we don't call experiment.log_model().
     ##################################################################################
